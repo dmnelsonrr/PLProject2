@@ -1,10 +1,15 @@
-package cannata;
+package Nelson.Business;
 
-public class HelloWorld {
+//import interfaces
+import Nelson.Account.Interfaces.Depositable;
+import Nelson.Account.Interfaces.Withdrawable;
 
-    public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
+public class Transactions{
+    //methods for depositing and withdrawing
+    public static void deposit(Depositable account, double amount){
+        account.deposit(amount);
     }
-
+    public static void withdraw(Withdrawable account, double amount){
+        account.withdraw(amount);
+    }
 }
