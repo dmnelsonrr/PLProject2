@@ -28,9 +28,29 @@
     <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}">
             <manifest>
-                <attribute name="Main-Class" value="Nelson.Customer.PersonApp"/>
+                <attribute name="Main-Class" value="Nelson.ui.PersonApp"/>
             </manifest>
     </jar>
+  </target>
+
+  <target name="debug" depends="compile"
+        description="generate the distribution">
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Main-Class" value="cannata.HelloWorld"/>
+            </manifest>
+    </jar>
+     <java fork="on"
+       failonerror="true"
+       classpath="xxx"
+       classname="xxx">
+     <jvmarg line="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=51973" />
+     <arg line="--arg1 arg2 --arg3 arg4"/>
+    </java>
   </target>
 
   <target name="clean"
