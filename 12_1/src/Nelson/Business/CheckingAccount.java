@@ -1,16 +1,10 @@
-package Nelson.Business;
-import java.text.NumberFormat;
+package cannata;
 
-public class CheckingAccount extends Account{
-    //initiate instance variable monthly fee with default value
-    private double monthlyFee = 1;
+public class HelloWorld {
 
-    //methods
-    void subtractMonthlyFee(){}
-    void setMonthlyFee(double monthlyFee){this.monthlyFee = monthlyFee;}
-    double getMonthlyFee(){return monthlyFee;}
-    String getMonthlyFeeFormatted(){
-        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
-        return defaultFormat.format(monthlyFee);
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
     }
+
 }
