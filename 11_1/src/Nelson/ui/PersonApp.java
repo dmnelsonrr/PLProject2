@@ -32,7 +32,7 @@ public class PersonApp {
                     customer.setLast_name(lastName);
                     String emailAddress = Console.getString("Enter e-mail address: ");
                     customer.setEmail_address(emailAddress);
-                    double customerNumber = Console.getDouble("Customer number:  ");
+                    String customerNumber = Console.getString("Customer number:  ");
                     customer.setCustomerNumber(customerNumber);
                     Console.displayLine();
 

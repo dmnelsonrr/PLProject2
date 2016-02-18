@@ -24,4 +24,8 @@ public abstract class Person {
         return "Name: " + first_name + " " + last_name + "\nE-mail: " + email_address;
     }
 
+    public String getDisplayText() {
+        return toString();
+    }
+
 }

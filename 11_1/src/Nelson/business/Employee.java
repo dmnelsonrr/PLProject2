@@ -11,6 +11,7 @@ public class Employee extends Person{
     public void setSocialSecurity(double socialSecurity){ this.socialSecurity = socialSecurity;}
     public double getSocialSecurity() { return socialSecurity;}
 
+    @Override
     public String getDisplayText(){
         String social = new String(Double.toString(socialSecurity));
         return super.toString() + "\nSocial security number: "
